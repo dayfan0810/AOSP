@@ -1,0 +1,33 @@
+@media (max-width: 1023px) {
+	.work-post, .pagination {
+		width:100%;
+	}
+	.entry-header h2 { font-size:36px; line-height:40px; }
+	.preview-img { overflow:hidden; }
+}
+@media (max-width: 468px) {
+	.entry-header span { display:none; }
+	.entry-header h2 { font-size:18px; line-height:24px;margin-left: 20px; margin-right: 20px;}
+	.format-image .entry-header { bottom:10px; }
+	.work-content h3.heading-work { font-size:18px; line-height:30px; }
+	.work-content {padding: 20px 20px 60px 20px; }
+	.big-header { font-size:20px; margin-left:20px; }
+	.hidden-sidebar { padding: 40px 20px 20px 20px; }
+	#searchform #s { width:auto; }
+	.avatar-com, .avatar-com img { width:50px; height:50px; }
+	.comment-info { margin-left:0px; }
+	.comment-info .name-author { padding-left:10px; float:none; }
+	.comment-info .date-com { float:none; display:block;  padding-left:30px; }
+	.comment-info .text-com { padding-top:10px; }
+	.add-comment input, .add-comment textarea { width:100%; }
+	.tags { margin-left:20px; }
+	.right-work-info { margin-right:20px; }
+	.comments-box { margin-left: 20px; margin-right: 20px; }
+	.add-box-comment { padding:0px 20px; }
+	blockquote { font-size:24px; line-height:30px; }
+	.overlay-meta-wrapper li { display:none; }
+	.grid-2, .grid-3 { width:96%; float:none; }
+	.tabs li { padding-left: 10px; padding-right: 10px; }
+	.two { padding-left:0; }
+	.soc { margin-right:0; }
+}
