@@ -30,9 +30,9 @@
 	
     	<div class="work-post format-image">
         	<div class="preview-img">
-            	<img src="images/downcm14-1.png" alt="">
+            	<img src="images/howmany.png" alt="">
                 <header class="entry-header">
-                    <h2>下载cm14.1最新代码</h2>
+                    <h2>CM14.1的构建机制</h2>
                 <span>Date:  Apr 10, 2017  Views: 3479</span>
                 </header><!-- .entry-header -->
             </div>
@@ -43,56 +43,15 @@
 
 
 
-                <p>创建代码存放文件夹</p>
-                <div class="highlighter-rouge"><pre class="highlight"><code>
-    $ mkdir -p ~/bin
-    $ mkdir -p ~/android/lineage
+               
+                <p>
+                想知道CM14.1可以构建多少个型号?用下面这个
+                 </p>命令
+                <div class="highlighter-rouge"><pre class="highlight"><code>$ find . -name Android.mk | wc -l
 </code></pre>
-                </div>
-
-                <p>安装repo命令</p>
-                <div class="highlighter-rouge"><pre class="highlight"><code>$ curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo
-$ chmod a+x ~/bin/repo
-</code></pre>
-
-<p>开始下载</p>
-                <div class="highlighter-rouge"><pre class="highlight"><code>$ repo sync -c -j16
-(这里可以使用repo help --all查看repo包含的命令,我们这里使用repo sync
- 你也可以使用repo sync -h查看后面跟什么参数,我一般使用repo sync -c -j16 )
-</code></pre>
-<p>
-下载完成之后,使用
-</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>$ source build/envsetup.sh
---This forces the shell to run the envsetup.sh script within the current shell
-$ breakfast hammerhead
-</code></pre>
-这时候你会看到terminal中出现
-<div class="highlighter-rouge"><pre class="highlight"><code>
-day@ubuntu:~/project/quanxinlineage$ breakfast hammerhead
-including vendor/cm/vendorsetup.sh
-build/core/product_config.mk:249: *** Can not locate config makefile for product "lineage_hammerhead".  Stop.
-build/core/product_config.mk:249: *** Can not locate config makefile for product "cm_hammerhead".  Stop.
-build/core/product_config.mk:249: *** Can not locate config makefile for product "lineage_hammerhead".  Stop.
-Device hammerhead not found. Attempting to retrieve device repository from LineageOS Github (http://github.com/LineageOS).
-Found repository: android_device_lge_hammerhead
-Default revision: cm-14.1
-Checking branch info
-Checking if device/lge/hammerhead is fetched from android_device_lge_hammerhead
-Adding dependency: LineageOS/android_device_lge_hammerhead -> device/lge/hammerhead
-Using default branch for android_device_lge_hammerhead
-Syncing repository to retrieve project.
-</code></pre>
-<p>
-这表示你正在下载对应的手机型号的文件,你会在/.repo/下面看到如下变化,前后图比较多了红框中的大文件.
-<img src="images/downcm14-1-notbreakfast.png" alt=""> 
-</p>
-   
-
-
-
-
-
+</div>
+<p>可以看到有3865个modules
+               
                     <div class="clearfix"></div>
             <div class="tags">
 					<a href="#" rel="tag">about</a> <a href="#" rel="tag">airtheme</a> <a href="#" rel="tag">social</a>			
